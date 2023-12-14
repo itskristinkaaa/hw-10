@@ -1,0 +1,134 @@
+@font-face {
+	font-family: 'RobotoSlab';
+	src: url('../fonts/RobotoSlab-VariableFont_wght.woff') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway-VariableFont_wght.woff') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Preahvihear';
+	src: url('../fonts/Preahvihear-Regular.woff') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* reset */
+* {
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* my styles */
+
+.container {
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.header {
+	padding: 10px 0;
+	background: lightslategray;
+}
+
+.list {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	font-size: 20px;
+    font-family: 'RobotoSlab';
+}
+
+.list li a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 10px 25px;
+	white-space: nowrap;
+}
+
+.second-list {
+	padding-top: 10px;
+	position: absolute;
+	font-family: 'Preahvihear';
+	top: 100%;
+	left: 0;
+	display: none;
+}
+
+.second-list > li {
+	background: lightsalmon;
+}
+
+.list > li,
+.second-list li {
+    position: relative;
+    transition: .3s;
+}
+
+.second-list li:hover {
+    background-color: lightslategray;
+}
+
+.third-list {
+    width: 100%;
+	position: absolute;
+    top: 0;
+	left: -100%;
+    background: lightslategray;
+    display: none;
+}
+
+.list > li:hover .second-list,
+.second-list > li:hover .third-list {
+	display: block;
+}
